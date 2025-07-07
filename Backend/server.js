@@ -2,7 +2,7 @@ const express = require('express');
 const { Pool } = require('pg');
 const cors = require('cors');
 const app = express();
-const port = 3031;
+const port = 3208;
 
 // Database connection configuration
 const pool = new Pool({
@@ -208,5 +208,5 @@ app.delete('/api/offboarding', async (req, res) => {
 
 // Start server
 app.listen(port, () => {
-    console.log(`Server running at http://13.232.22.194:${port}`);
+    console.log(`Server running at http://3.85.61.23:${port}`);
 });
