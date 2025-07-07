@@ -9,7 +9,7 @@ services:
       POSTGRES_PASSWORD: admin123
       POSTGRES_DB: offboarding_db
     ports:
-      - "5003:5432"
+      - "5208:5432"
     volumes:
       - pgdata:/var/lib/postgresql/data
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
@@ -20,7 +20,7 @@ services:
     build: ./Backend
     container_name: backend
     ports:
-      - "3031:3031"
+      - "3208:3208"
     depends_on:
       - postgres
     networks:
@@ -30,7 +30,7 @@ services:
     build: ./Employee-offboardinh
     container_name: employee-offboardinh
     ports:
-      - "8033:80"
+      - "8016:80"
     networks:
       - offboarding-net
 
@@ -38,7 +38,7 @@ services:
     build: ./HR-offboarding
     container_name: hr-offboarding
     ports:
-      - "8034:80"
+      - "8017:80"
     networks:
       - offboarding-net
 
